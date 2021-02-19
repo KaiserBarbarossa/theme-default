@@ -58,7 +58,7 @@
           {% endfor %}
         </ul>
         <ul class="header-right">
-          {% if USER.is_authenticated() %}
+          {% if USER.is_authenticated %}
           <li>
             <a href="{{ USER|url }}" class="hidden-sm" title="{% trans %}My profile{% endtrans %}" data-toggle="tooltip" data-placement="bottom">{{ USER }}</a>
           </li>
