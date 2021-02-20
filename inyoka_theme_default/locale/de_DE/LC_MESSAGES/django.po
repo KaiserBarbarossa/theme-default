@@ -1028,6 +1028,9 @@ msgstr "Id"
 msgid "Ikhaya"
 msgstr "Ikhaya"
 
+msgid "Inbox"
+msgstr "Posteingang"
+
 msgid "Interface"
 msgstr "Oberfläche"
 
@@ -1310,6 +1313,12 @@ msgstr "Wiederherstellen"
 msgid "Revisions"
 msgstr "Revisionen"
 
+msgid "Sent"
+msgstr "Gesendet"
+
+msgid "Sent message"
+msgstr "Nachricht senden"
+
 msgid "Servererror"
 msgstr "Serverfehler"
 
@@ -1458,6 +1467,9 @@ msgstr "Titel"
 msgid "Topics"
 msgstr "Themen"
 
+msgid "Trash"
+msgstr "Papierkorb"
+
 msgid "Unpublish"
 msgstr "Veröffentlichung aufheben"
 
@@ -1575,3 +1587,6 @@ msgstr ""
 
 msgid "Compose mail"
 msgstr "E-Mail verfassen"
+
+msgid "Compose message"
+msgstr "Nachricht verfassen"

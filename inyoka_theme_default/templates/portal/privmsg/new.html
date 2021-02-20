@@ -1,0 +1,25 @@
+{#
+    portal/privmsg/new.html
+    ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Template for composíng a new message.
+
+    :copyright: (c) 2013-2021 by the Inyoka Team, see AUTHORS for more details.
+    :license: BSD, see LICENSE for more details.
+#}
+
+{% extends 'portal/privmsg/base.html' %}
+
+{% block title %}
+   {% trans %}Compose message{% endtrans %} – {{ super() }}
+{% endblock title %}
+
+{% block breadcrumb %}
+   {{ super() }}
+	
+   {{ macros.breadcrumb_item(_('Compose message'), href('portal', 'privmsg', 'new')) }}
+{% endblock %}
+
+{% block content %}
+   {{ macros.outer_form(csrf_token(), form, submit_label=_('Sent message')) }}
+{% endblock %}

@@ -1,0 +1,40 @@
+{#
+    portal/privmsg/base.html
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    :copyright: (c) 2013-2021 by the Inyoka Team, see AUTHORS for more details.
+    :license: BSD, see LICENSE for more details.
+#}
+
+{% extends 'portal/base.html' %}
+
+{% block title %}
+   {% trans %}Messages {% endtrans%} – {{ super() }}
+{% endblock title %}
+
+{% block breadcrumb %}
+   {{ super() }}
+	
+   {{ macros.breadcrumb_item(_('Messages'), href('portal', 'privmsg')) }}
+{% endblock %}
+
+{% block sidebar %}
+  {% call macros.sidebar(_('Member informations')) %}
+    {{ macros.sidebar_item(_('Members'), href('portal', 'users')) }}
+    {{ macros.sidebar_item(_('Who is online?'), href('portal', 'whoisonline')) }}
+    {{ macros.sidebar_item(_('Groups'), href('portal', 'groups')) }}
+  {% endcall %}
+
+  {% call macros.sidebar(_('Messages')) %}
+    {{ macros.sidebar_item(_('Inbox'), href('portal', 'privmsg', 'inbox')) }}
+    {{ macros.sidebar_item(_('Sent'), href('portal', 'privmsg', 'sent')) }}
+    {{ macros.sidebar_item(_('Archive'), href('portal', 'privmsg', 'archive')) }}
+    {{ macros.sidebar_item(_('Trash'), href('portal', 'privmsg', 'trash')) }}
+    {{ macros.sidebar_item(_('Compose message'), href('portal', 'privmsg', 'new')) }}
+  {% endcall %}
+
+  {% call macros.sidebar(_('Additional functions')) %}
+    {{ macros.sidebar_item(_('Pastebin'), href('pastebin')) }}
+    {{ macros.sidebar_item(_('Calendar'), href('portal', 'calendar')) }}
+  {% endcall %}
+ {% endblock %}
